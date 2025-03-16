@@ -1,8 +1,33 @@
-const heading = document.createElement("h1");
-heading.innerHTML = "HelloWorld JS";
-const root = document.getElementById("root");
-root.appendChild(heading);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const headingR = React.createElement("h1", {}, "This is a heading");
-const rootR = ReactDOM.createRoot(document.getElementById("rootR"));
-rootR.render(headingR);
+//react element
+const heading = React.createElement(
+  "h1",
+  { id: "heading" },
+  "I am Pratishtha Singh!!"
+);
+
+//React component
+const HeadingComponent = () => {
+  return <h1>Heading</h1>;
+};
+
+const Title = () => (
+  <div>
+    {HeadingComponent()}
+    <HeadingComponent />
+    <HeadingComponent></HeadingComponent>
+    {heading}
+    <h1>Title</h1>
+  </div>
+);
+
+const jsxHeading = <h1 id="heading">Namaste-react</h1>;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxHeading);
+
+//how to render functional component?
+
+root.render(<Title />);
