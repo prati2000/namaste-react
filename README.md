@@ -173,24 +173,25 @@ for single line JSX we can directly write it, but for multi-line JSX we have to 
 # React Components
 
 Class Based Component - Old way of writing code - uses js classes
-Functional Component - New way of writing code - uses js functions
+Functional Component - New way of writing code - uses js functions.
+Just a normal JS function, which return some piece of JSX.
 
 JS function which retrun a react element.
 
 # Ways to define component
 
-const HeadingComponent = () => {
-return <h1>"Heading</h1>;
+<!-- const HeadingComponent = () => {
+return <h1>Heading</h1>;
 };
 
-const HeadingComponent2 = () => <h1>"Heading 2</h1>;
+const HeadingComponent2 = () => <h1>Heading 2</h1>;
 
 const HeadingComponent3 = () => (
 
   <div>
-    <h1>"Heading 3</h1>
+    <h1>Heading 3</h1>
   </div>
-);
+); -->
 
 # Components Composition
 
@@ -203,3 +204,56 @@ Inside JSX if we write any code {}, it is treated as JS code. Any piece of JS ex
 
 Attacker can send some data and this data will be executed as it is a JS code.
 JSX sanitizes CSS.
+
+# Project - Food ordering app
+
+- Header
+- - Logo
+- - Nav Bar
+- Body
+- - Search
+- - ResturantContainer
+- - - RestaurantCard
+- - - - Img
+- - - - Name, cusine, star
+- Footer
+- - Copyright
+- - Links
+- - Address
+- - Contact
+
+# Props:
+
+Normal arguments passed to a react component.
+
+# Config Driven UI
+
+Website driven by data (configs).
+
+# Import and Exports
+
+1. default export: File can export single thing by default. Bydefault a file can export only one thing : export default Component;
+2. named export: We can export multiple things: export const Component;
+
+3. default import: import Component from "path";
+4. named import: import { Component } from "path";
+
+# Hooks
+
+Normal JS utility function given to us by react.
+
+- useState(): Superpowerful react state variables.
+- useEffect():
+
+Whenever a state variable updates react re-renders the components.
+
+# Why React?
+
+Doing efficient DOM manipulation.
+
+Virtual DOM: React creates a virtual DOM.
+Representation of actual DOM.
+Diff Algorithm: Finds the diff b/w ols VD and new VD, then update the actual DOM a/c to that.
+Reconciliation Algorithm AKA React Fiber(came in React 16)
+New way of finding the diff and updating the DOM.
+Reconciliation, in the context of React, is the process of determining how to update the Document Object Model (DOM) to match the most recent state of a React component. In simpler terms, it's the algorithm that React employs to efficiently update the UI without rendering the entire tree.
