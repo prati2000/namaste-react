@@ -240,7 +240,7 @@ Website driven by data (configs).
 
 # Hooks
 
-Normal JS utility function given to us by react.
+Normal JS utility function given to us by react. It has it's own specific usecase.
 
 - useState(): Superpowerful react state variables.
 - useEffect():
@@ -257,3 +257,15 @@ Diff Algorithm: Finds the diff b/w ols VD and new VD, then update the actual DOM
 Reconciliation Algorithm AKA React Fiber(came in React 16)
 New way of finding the diff and updating the DOM.
 Reconciliation, in the context of React, is the process of determining how to update the Document Object Model (DOM) to match the most recent state of a React component. In simpler terms, it's the algorithm that React employs to efficiently update the UI without rendering the entire tree.
+
+# Monolith Architecture:
+
+When all the code, API, UI, DB, Auth, SMS, Notification is written in a single file and even it we want to make a single change let's say we have to change buttons color. Then we have to build, complie and deploy the whole project.
+
+# Microservices Architecture:
+
+Backend serrvice, UI, Auth, DB, SMS, email notifications.
+All the service combines together and form a big app.
+For each and everything we had a seperate project.
+
+How do these services interact with each other?
